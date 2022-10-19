@@ -1,0 +1,76 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#App {
+  width: 100%;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+
+atomico-keen-slider {
+  width: 100%;
+  color: white;
+  position: relative;
+  display: block;
+}
+.slide {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, black, #404040);
+}
+h1 {
+  font-size: 16vh;
+}
+.button {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  background: transparent;
+  margin: 0px 1rem;
+  border-radius: 100%;
+  color: unset;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+}
+.button[slot="to-left"] {
+  left: 1rem;
+}
+.button[slot="to-right"] {
+  right: 1rem;
+}
+[slot="pagination-items"] {
+  position: absolute;
+  z-index: 1;
+  bottom: 30px;
+  left: 50%;
+  display: flex;
+  gap: 1rem;
+  transform: translateX(-50%);
+}
+.dot {
+  border-radius: 100px;
+  width: 1rem;
+  height: 1rem;
+  padding: 0px;
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.dot[active="true"] {
+  opacity: 1;
+}
